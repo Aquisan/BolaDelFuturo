@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Bola del Futuro</string>
+    <string name="hello_world">¡La respuesta es si!</string>
+    <string name="action_settings">Settings</string>
+    <string name="pregunta">Haz tu pregunta</string>
+
+    
+
+</resources>
