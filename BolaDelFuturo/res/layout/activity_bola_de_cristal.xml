@@ -16,17 +16,6 @@
         android:scaleType="fitCenter"
         android:src="@drawable/ball01" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:gravity="center_horizontal"
-        android:shadowColor="@android:color/white"
-        android:shadowRadius="10"
-        android:textSize="32sp" />
-
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"
@@ -35,5 +24,36 @@
         android:layout_alignParentLeft="true"
         android:onClick="questionAction"
         android:text="@string/pregunta" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:weightSum="1" >
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.2" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:gravity="center_horizontal"
+            android:shadowColor="@android:color/white"
+            android:shadowRadius="10"
+            android:textSize="32sp" />
+
+        <View
+            android:id="@+id/View01"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.2" />
+
+    </LinearLayout>
 
 </RelativeLayout>
