@@ -46,7 +46,8 @@
             android:gravity="center_horizontal"
             android:shadowColor="@android:color/white"
             android:shadowRadius="10"
-            android:textSize="32sp" />
+            android:textSize="32sp" 
+            android:text="Esto es una prueba"/>
 
         <View
             android:id="@+id/View01"

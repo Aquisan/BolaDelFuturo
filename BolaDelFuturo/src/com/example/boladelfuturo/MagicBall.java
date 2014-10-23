@@ -9,6 +9,7 @@ public class MagicBall {
 	
 	//private Context context;
 	private static String[] answers;
+	
    /*
 	MagicBall(Context context){
 		this.context=context;
