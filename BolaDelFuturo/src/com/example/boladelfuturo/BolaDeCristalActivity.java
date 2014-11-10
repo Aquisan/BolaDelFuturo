@@ -24,29 +24,11 @@ public class BolaDeCristalActivity extends ActionBarActivity {
 		
 		// Assign the Views from the layout file
 		answerLabel = (TextView) findViewById(R.id.textView1);
-		//getAnswerButton = (Button) findViewById(R.id.button1);
-		
-		//Resources res = getResources();
-		//answers = res.getStringArray(R.array.answers);
-		//magicBall = new MagicBall(this);
-		/*
-		getAnswerButton.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) {
-				Random aleatorio = new Random();
-		
-				//answerLabel.setText(answers[aleatorio.nextInt(answers.length)]);
-				answerLabel.setText(magicBall.getPrediction());
-
-			}
-		});*/
+	
 	}
 
 	public void questionAction(View v) {
 		
-
-		//answerLabel.setText(answers[aleatorio.nextInt(answers.length)]);
 		answerLabel.setText(MagicBall.getPrediction(this));
 	}
 }
