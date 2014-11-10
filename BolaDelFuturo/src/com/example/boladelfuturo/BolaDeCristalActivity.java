@@ -1,15 +1,17 @@
 package com.example.boladelfuturo;
 
 
+import android.app.Activity;
 import android.graphics.drawable.AnimationDrawable;
+import android.media.MediaPlayer;
+import android.media.MediaPlayer.OnCompletionListener;
 import android.os.Bundle;
-import android.support.v7.app.ActionBarActivity;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class BolaDeCristalActivity extends ActionBarActivity {
+public class BolaDeCristalActivity extends Activity {
 	
 	// Declare our views variables
 	private TextView answerLabel;
@@ -35,9 +37,11 @@ public class BolaDeCristalActivity extends ActionBarActivity {
 		
 		
 		answerLabel.setText(MagicBall.getPrediction(this));
+		//background.setBackgroundColor(MagicBall.getColor());
 		animateBall();
 		animateAnswer();
-		//background.setBackgroundColor(MagicBall.getColor());
+		playSound();
+		
 	}
 	
 	private void animateBall(){
@@ -58,5 +62,17 @@ public class BolaDeCristalActivity extends ActionBarActivity {
 		answerLabel.setAnimation(animation);
 	}
 	
-	
+	private void playSound(){
+		MediaPlayer player = MediaPlayer.create(this, R.raw.magic_ball);
+		player.start();
+		
+		player.setOnCompletionListener(new OnCompletionListener() {
+			
+			@Override
+			public void onCompletion(MediaPlayer mp) {
+				mp.release();
+				
+			}
+		});
+	}	
 }
