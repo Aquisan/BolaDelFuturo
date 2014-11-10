@@ -4,17 +4,15 @@ package com.example.boladelfuturo;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.View;
-import android.widget.Button;
 import android.widget.TextView;
 
 public class BolaDeCristalActivity extends ActionBarActivity {
 	
 	// Declare our views variables
-	TextView answerLabel;
-	Button getAnswerButton;
-	MagicBall magicBall;
+	private TextView answerLabel;
+	//private RelativeLayout background;
 	
-	String[] answers ;
+	
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -22,13 +20,15 @@ public class BolaDeCristalActivity extends ActionBarActivity {
 		setContentView(R.layout.activity_bola_de_cristal);
 		
 		
-		// Assign the Views from the layout file
+		
 		answerLabel = (TextView) findViewById(R.id.textView1);
-	
+		//background = (RelativeLayout) findViewById(R.id.background);		
+		
 	}
 
 	public void questionAction(View v) {
 		
 		answerLabel.setText(MagicBall.getPrediction(this));
+		//background.setBackgroundColor(MagicBall.getColor());
 	}
 }
